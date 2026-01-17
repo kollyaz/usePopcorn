@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, use } from "react";
+import { useState, useEffect, useRef } from "react";
 import { KEY, Loader } from "./App";
 import StarRating from "./StarRating";
 import { useKey } from "./useKey";

@@ -3,19 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import "./style.css";
 import App from "./App";
-import Geolocation from "./exercise/Geolocation";
-// import Converter from "./exercise/Converter";
-
-import StarRating from "./StarRating";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-    {/* <Geolocation /> */}
-
-    {/* <Converter /> */}
-    {/* <StarRating /> */}
   </React.StrictMode>
 );
 
