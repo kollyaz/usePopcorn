@@ -54,9 +54,34 @@ body {
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  /* overflow: scroll; */
+  overflow: auto;
   position: relative;
 }
+
+.box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.box::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 8px;
+}
+
+.box::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* .box {
+  scrollbar-width: none;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+} */
 
 .loader {
   text-align: center;
@@ -139,7 +164,9 @@ body {
   list-style: none;
   padding: 0.8rem 0;
   /* overflow: scroll; */
+  /* overflow: auto; */
 }
+
 
 .list-watched {
   height: calc(100% - 9rem);
@@ -338,9 +365,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/* //////////////////////////////////////////// */
-
 
 /*
 SPACING SYSTEM (px)
