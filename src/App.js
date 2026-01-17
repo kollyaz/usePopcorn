@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { WatchedSummary } from "./WatchedSummary";
-import { WatchedMovieList } from "./WatchedMovieList";
-import { MovieDetails } from "./MovieDetails";
-import { MovieList } from "./MovieList";
-import { useMovies } from "./useMovies";
-import { useLocalStorageState } from "./useLocalStorageState";
-import { Search } from "./Search";
+import { WatchedSummary } from "./components/WatchedSummary";
+import { WatchedMovieList } from "./components/WatchedMovieList";
+import { MovieDetails } from "./components/MovieDetails";
+import { MovieList } from "./components/MovieList";
+import { useMovies } from "./hooks/useMovies";
+import { useLocalStorageState } from "./hooks/useLocalStorageState";
+import { Search } from "./components/Search";
 
 export const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-export const KEY = "db61133e";
-
 export default function App() {
+  // console.log("OMDb Key:", process.env.REACT_APP_OMDB_KEY);
+
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
   const { movies, loading, error } = useMovies(query);
