@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const KEY = "db61133e";
 
-export function useMovies(query, callback) {
+export function useMovies(query) {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -18,7 +18,7 @@ export function useMovies(query, callback) {
         setError("");
 
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+          `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
           { signal: controller.signal }
         );
         if (!res.ok) throw new Error("Something went wrong fetching movies");
